@@ -1,13 +1,12 @@
 package ge.jibo.aspectj;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class App {
+    public static void main(String[] args) {
+        print("test");
     }
+
+    public static void print(String value) {
+        System.out.println(value);
+    }
+
 }
