@@ -7,9 +7,9 @@ import org.aspectj.lang.annotation.Aspect;
 @Aspect
 public class LoggerAspect {
 
-    @Around("execution(static * *(..))")
+    @Around("execution(!static * *(..))")
     public Object dontLogDuplicates(ProceedingJoinPoint thisJoinPoint) throws Throwable {
-        System.out.println("Test Message from aspect");
+        System.out.println("Message from LoggerAspect object");
         return thisJoinPoint.proceed();
     }
 }
